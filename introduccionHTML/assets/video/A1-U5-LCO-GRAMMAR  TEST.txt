@@ -1,0 +1,107 @@
+﻿A1-U5-LCO-GRAMMAR  TEST
+Choose the correct option 
+
+::1.:: Paul knows the city pretty well, ______ he?
+      {=doesn’t
+	~ does
+	~aren’t}
+
+::2.:: You aren’t sure about getting married,___you?
+   	{~Do
+	=Are
+	~Aren’t}
+
+::3.:: The subway will be a good project for the city,____it?
+	{~Will
+	=Won’t
+	~Isn’t}
+
+::4.:: Susan doesn’t know how to drive, ___ she?
+	{=Does
+	~Do
+	~Is}
+
+::5.::  Human beings aren’t aware of saving energy, ___ they?
+	{~do
+	=are
+	~is}
+
+::6.::  Chickens don't know how to fly, ___ they?
+	{~does
+	=do
+	~are}
+
+::7.::  Pollution will destroy the environment, __ it?
+	{~will
+	~doesn’t
+	=won’t}
+
+::8.::  Carlos and Andres didn’t go out with their girlfriends last night, _____ they?
+	{~do
+	~does
+	=did}
+
+::9.::  Carlos paid the bill in the restaurant, ___ he?
+	{=didn’t
+	~don’t
+	~wasn’t}
+
+::10.::  David would come with us, ___ he?
+	{~Would
+	=wouldn’t
+	~couldn’t }
+
+::1.:: you _____not ____ him about the divorce 
+	{=better / ask
+	~better / asking
+	~should/ asking}
+
+::2.:: She ___better not go to that party 
+	{~has 
+	=had
+	~have }
+
+::3.::  The conference is almost to start you had ____ hurry 
+	{=better
+	~best
+	~to}
+
+::4.::  ___ better ___ drink so much wine 
+	{~She’s / not
+	=She’d / not
+	~She/ don’t }
+
+
+::5.::  Carlos and Oscar _____ better ____ their problems instead of fighting 
+	{=had / solve
+	~have / to solve
+	~had / solving }
+
+::6.::  ______ you better switch your computer off? 
+	{=Hadn’t
+	~Hasn’t
+	~Haven’t }
+
+::7.::  Martin ____ better get a taxi, the buses are so slow.
+       {=Had
+	 ~has
+	 ~have}
+       
+::8.:: Estefany had    ____  new shoes. The old ones are really ugly 
+       {~best/buy
+	 ~better/buy
+	 =better / buy}
+       
+::9.:: Gregory ___ better go to the psycho. He is getting out of his mind  
+       {~has
+	 =had
+	 ~have}
+       
+::10.::  _____ better eat fewer hamburgers and more vegetables 
+       {~Theyn’d
+	 ~They’
+	 =They’d}
+
+
+
+
