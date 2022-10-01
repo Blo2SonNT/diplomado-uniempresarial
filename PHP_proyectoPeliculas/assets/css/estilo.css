@@ -1,0 +1,36 @@
+.logoPagina {
+    width: 10%;
+}
+
+.link-navbar {
+    white-space: nowrap;
+}
+
+.textoNoticia,
+.seccion-noticia {
+    transition: all 300ms;
+}
+
+.textoNoticia:hover {
+    color: rgb(221, 42, 42);
+    cursor: pointer;
+}
+
+.seccion-noticia:hover {
+    background: rgb(169, 169, 169);
+}
+
+footer {
+    margin-top: 50px;
+    padding-top: 5%;
+    height: 40vh;
+    background: url("https://img5.goodfon.com/wallpaper/nbig/6/2f/mstiteli-voina-beskonechnosti-avengers-infinity-war-komiks-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.link-redes {
+    background: transparent;
+    color: #fff;
+}
