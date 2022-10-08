@@ -1,6 +1,19 @@
 <?php
 require_once 'config.php';
 require_once 'components/navbar.php';
+$servidor = "localhost";
+$usuario = "root";
+$clave = "";
+$nombre_bd = "marvel_uniempresarial";
+
+$conexion = mysqli_connect($servidor, $usuario, $clave, $nombre_bd);
+
+if (!$conexion) {
+    die("Conexion fallo:" . mysqli_connect_error());
+}
+
+$query_sql_paises = "SELECT * FROM tb_paises";
+$resultado_paises = mysqli_query($conexion, $query_sql_paises);
 ?>
 
 <section class="container mt-5">
@@ -71,9 +84,13 @@ require_once 'components/navbar.php';
             <div class="form-floating">
                 <select class="form-select" id="selectPaisRegistro" name="selectPaisRegistro">
                     <option selected disabled value="">Seleccione una...</option>
-                    <option value="1">Colombia</option>
-                    <option value="2">Estados unidos</option>
-                    <option value="3">Belgica</option>
+                    <?php
+                    while ($data = mysqli_fetch_object($resultado_paises)) {
+                    ?>
+                        <option value="<?php echo $data->id_registro ?>"><?php echo $data->nombre ?></option>
+                    <?php
+                    }
+                    ?>
                 </select>
                 <label for="selectPaisRegistro">Pais</label>
             </div>
@@ -110,4 +127,3 @@ require_once 'components/navbar.php';
 <?php
 require_once 'components/footer.php';
 ?>
-
