@@ -1,4 +1,8 @@
 <?php
+// session_start();
+// if($_SESSION['correo']){
+//     echo "bienvenido";
+// }
 $titulo_pagina = 'Inicio peliculas y series de MARVEL';
 require_once 'config.php';
 require_once 'components/navbar.php';

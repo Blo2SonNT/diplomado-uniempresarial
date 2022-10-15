@@ -1,17 +1,5 @@
 <?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$nombre_bd = "marvel_uniempresarial";
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $nombre_bd);
-
-if(!$conexion){
-    die("Conexion fallo:". mysqli_connect_error());
-}
-// else{
-//     echo "Conexión exitosa";
-// }
+require_once '../includes/conexion.php';
 if(empty($_POST['inputNombrePais'])){
     echo "el nombre del paisesta vacio";
     return;

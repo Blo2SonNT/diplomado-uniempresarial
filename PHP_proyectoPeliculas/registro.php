@@ -1,19 +1,13 @@
 <?php
 require_once 'config.php';
 require_once 'components/navbar.php';
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$nombre_bd = "marvel_uniempresarial";
-
-$conexion = mysqli_connect($servidor, $usuario, $clave, $nombre_bd);
-
-if (!$conexion) {
-    die("Conexion fallo:" . mysqli_connect_error());
-}
+require_once 'admin/includes/conexion.php';
 
 $query_sql_paises = "SELECT * FROM tb_paises";
 $resultado_paises = mysqli_query($conexion, $query_sql_paises);
+
+$query_sql_generos = "SELECT * FROM tb_generos";
+$resultado_generos = mysqli_query($conexion, $query_sql_generos);
 ?>
 
 <section class="container mt-5">
@@ -46,38 +40,21 @@ $resultado_paises = mysqli_query($conexion, $query_sql_paises);
         <div class="col-md-12 mb-4">
             <h4 class="mb-4">Generos favoritos</h4>
             <div class="row">
-                <div class="col-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check1">
-                        <label class="form-check-label" for="check1">
-                            Terror
-                        </label>
+
+                <?php
+                while ($dataGenero = mysqli_fetch_object($resultado_generos)) {
+                ?>
+                    <div class="col-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkGenero<?php echo $dataGenero->id_registro ?>">
+                            <label class="form-check-label" for="checkGenero<?php echo $dataGenero->id_registro ?>">
+                                <?php echo $dataGenero->nombre ?>
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check2">
-                        <label class="form-check-label" for="check2">
-                            Drama
-                        </label>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check3">
-                        <label class="form-check-label" for="check3">
-                            Comedia
-                        </label>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check4">
-                        <label class="form-check-label" for="check4">
-                            Animación
-                        </label>
-                    </div>
-                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="col-md-6">
