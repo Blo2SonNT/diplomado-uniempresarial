@@ -22,10 +22,10 @@ session_start();
     //este fragmento es para imprimir con html junto con php
     if (isset($titulo_pagina)) {
     ?><title><?php echo $titulo_pagina ?></title><?php
-                                                    } else {
-                                                        ?><title>Pagina de marvel</title><?php
-                                                    }
-                                            ?>
+                                                } else {
+                                                    ?><title>Pagina de marvel</title><?php
+                                                                                        }
+                                                                                            ?>
 
 
 
@@ -96,15 +96,21 @@ session_start();
                     <?php
                     } else {
                     ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>Administación del sitio</b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/paises">Gestión de paises</a></li>
-                                <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/generos">Gestión de generos</a></li>
-                            </ul>
-                        </li>
+                        <?php
+                        if ($_SESSION['perfil'] == 1) {
+                        ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <b>Administación del sitio</b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/paises">Gestión de paises</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/generos">Gestión de generos</a></li>
+                                </ul>
+                            </li>
+                        <?php
+                        }
+                        ?>
                         <li class="nav-item">
                             <a class="nav-link fw-bold link-navbar" href="<?php echo URL_WEB ?>/login/logout.php">
                                 <i class="fa-solid fa-right-from-bracket me-2"></i>Cerrar sesión

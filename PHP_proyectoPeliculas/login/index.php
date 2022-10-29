@@ -19,6 +19,16 @@ require_once '../admin/includes/conexion.php';
                     <label for="inputClaveLogin" class="form-label">Contraseña</label>
                     <input type="password" class="form-control" id="inputClaveLogin" name="inputClaveLogin">
                 </div>
+                <?php
+                if(isset($_GET['accesoInvalido'])){
+                    ?>
+                    <p class="text-danger fw-bold text-center">Datos de acceso invalido, intente nuevamente</p>
+                    <?php
+                }
+                ?>
+                <h6 class="text-center">
+                    <a href="olvido-clave.php" class="fw-bold">Olvido su contraseña?</a>
+                </h6>
                 <div class="d-flex justify-content-center align-items-center">
                 <button type="submit" class="btn btn-primary fw-bold">INGRESAR</button>
                 </div>

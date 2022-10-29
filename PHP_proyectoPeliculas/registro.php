@@ -46,7 +46,7 @@ $resultado_generos = mysqli_query($conexion, $query_sql_generos);
                 ?>
                     <div class="col-2">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="checkGenero<?php echo $dataGenero->id_registro ?>">
+                            <input class="form-check-input" type="checkbox" value="" id="checkGenero<?php echo $dataGenero->id_registro ?>" name="checkGenero<?php echo $dataGenero->id_registro ?>">
                             <label class="form-check-label" for="checkGenero<?php echo $dataGenero->id_registro ?>">
                                 <?php echo $dataGenero->nombre ?>
                             </label>
