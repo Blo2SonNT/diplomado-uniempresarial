@@ -5,6 +5,8 @@
 // }
 $titulo_pagina = 'Inicio peliculas y series de MARVEL';
 require_once 'config.php';
+require_once 'admin/includes/conexion.php';
+require_once 'components/consulta_opciones_navbar.php';
 require_once 'components/navbar.php';
 ?>
 

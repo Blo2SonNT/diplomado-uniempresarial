@@ -1,8 +1,9 @@
 <?php
 $estilos_adicionales = ['assets/css/login.css'];
 require_once '../config.php';
-require_once '../components/navbar.php';
 require_once '../admin/includes/conexion.php';
+require_once '../components/consulta_opciones_navbar.php';
+require_once '../components/navbar.php';
 
 ?>
 

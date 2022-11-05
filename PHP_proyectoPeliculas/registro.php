@@ -1,7 +1,9 @@
 <?php
 require_once 'config.php';
-require_once 'components/navbar.php';
 require_once 'admin/includes/conexion.php';
+require_once 'components/consulta_opciones_navbar.php';
+require_once 'components/navbar.php';
+
 
 $query_sql_paises = "SELECT * FROM tb_paises";
 $resultado_paises = mysqli_query($conexion, $query_sql_paises);

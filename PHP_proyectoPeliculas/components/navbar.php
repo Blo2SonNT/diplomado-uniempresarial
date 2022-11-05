@@ -21,11 +21,17 @@ session_start();
     <?php
     //este fragmento es para imprimir con html junto con php
     if (isset($titulo_pagina)) {
-    ?><title><?php echo $titulo_pagina ?></title><?php
-                                                } else {
-                                                    ?><title>Pagina de marvel</title><?php
-                                                                                        }
-                                                                                            ?>
+    ?>
+        <title>
+            <?php echo $titulo_pagina ?>
+        </title>
+    <?php
+    } else {
+    ?>
+        <title>Pagina de marvel</title>
+    <?php
+    }
+    ?>
 
 
 
@@ -66,7 +72,18 @@ session_start();
                             <i class="fa-solid fa-house me-2"></i>Inicio
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <?php
+                    while ($data_opcion = mysqli_fetch_object($resultado_opciones_visitante)) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold link-navbar" href="<?php echo URL_WEB."/".$data_opcion->link ?>">
+                                <?php echo $data_opcion->icono_opcion.  $data_opcion->nombre ?>
+                            </a>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                    <!-- <li class="nav-item">
                         <a class="nav-link fw-bold link-navbar" href="#">
                             <i class="fa-solid fa-dragon me-2"></i>Series
                         </a>
@@ -80,7 +97,7 @@ session_start();
                         <a class="nav-link fw-bold link-navbar" href="#">
                             <i class="fa-solid fa-otter me-2"></i>Animaciones
                         </a>
-                    </li>
+                    </li> -->
                     <?php
                     if (!isset($_SESSION['correo'])) {
                     ?>
@@ -106,6 +123,7 @@ session_start();
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/paises">Gestión de paises</a></li>
                                     <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/generos">Gestión de generos</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo URL_WEB ?>/admin/peliculas-series">Administracion de peliculas y series</a></li>
                                 </ul>
                             </li>
                         <?php
